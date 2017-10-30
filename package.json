@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tglima/Curso-NodeJs-e-MongoDB/issues"
   },
-  "homepage": "https://github.com/tglima/Curso-NodeJs-e-MongoDB#readme"
+  "homepage": "https://github.com/tglima/Curso-NodeJs-e-MongoDB#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
