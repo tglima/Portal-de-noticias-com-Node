@@ -1,9 +1,9 @@
-module.exports = function(app){
-	app.get('/noticias', function(req, res){
-		var connection = app.config.dbConnection();
-		connection.query('select * from tb_noticias', function(error, result){
-			res.render("noticias/noticias", {noticias : result});
-		});
-
-	});
-};	
+module.exports = function(application){
+    application.get('/noticias', function(req,res){
+        var connection = application.config.dbConnection();
+        var noticiasModel = application.app.models.noticiasModel;
+        noticiasModel.getNoticias(connection, function(error, result){
+            res.render('noticias/noticias', { noticias : result });
+        });
+    });
+}
